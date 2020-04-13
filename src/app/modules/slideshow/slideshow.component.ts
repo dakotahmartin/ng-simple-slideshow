@@ -161,7 +161,7 @@ export class SlideshowComponent implements OnInit, AfterViewInit, DoCheck, OnCha
       }
 
       if (this._isHidden === true) {
-        this._renderer.removeStyle(this.container.nativeElement, 'display');
+        if (this.container) this._renderer.removeStyle(this.container.nativeElement, 'display');
         this._isHidden = false;
       }
 
